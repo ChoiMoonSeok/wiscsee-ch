@@ -1,0 +1,4 @@
+./run_testclass.sh tests.test_workflow
+sudo python -m unittest -q tests.test_workflow
+Makefile:5: recipe for target 'run_demo' failed
+make: *** [run_demo] Interrupt

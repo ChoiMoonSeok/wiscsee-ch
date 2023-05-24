@@ -1,0 +1,330 @@
+sudo python -m unittest discover -s tests -v -p '*test*.py' > test-log
+test (test_dftldes.TestCleaning) ... ok
+test (test_dftldes.TestCleaning4Channel) ... ok
+test (test_dftldes.TestCleaningDataBlocksByCleaner) ... ok
+test (test_dftldes.TestCleaningTransBlocksByCleaner) ... ok
+test (test_dftldes.TestCleaningTransBlocksByCleaner4Channel) ... skipped 'Skip unless we want to test all'
+test (test_dftldes.TestDataBlockCleaner) ... ok
+test_discard (test_dftldes.TestDiscard) ... ok
+test_valid_ratio (test_dftldes.TestFTLSegmentedWrite) ... ok
+test_main (test_dftldes.TestFTLwithMoreData) ... ok
+test_valid_ratio (test_dftldes.TestGC) ... ok
+test_gc_triggering (test_dftldes.TestGlobalGC) ... ok
+test_threshold_sanity (test_dftldes.TestGlobalGC) ... ok
+test_threshold_sanity2 (test_dftldes.TestGlobalGC) ... ok
+test_used_ratio (test_dftldes.TestGlobalGC) ... ok
+test (test_dftldes.TestLevelingWear) ... ok
+test_request (test_dftldes.TestLockPool) ... ok
+test_boundaries (test_dftldes.TestLpnTable) ... ok
+test_init (test_dftldes.TestLpnTable) ... ok
+test_locking_lpn (test_dftldes.TestLpnTable) ... ok
+test_multiple_adds (test_dftldes.TestLpnTable) ... ok
+test_ops (test_dftldes.TestLpnTable) ... ok
+test_update (test_dftldes.TestMappingCache) ... ok
+test_update (test_dftldes.TestMappingCacheEvictByTrans) ... ok
+test_update (test_dftldes.TestMappingCacheEviction) ... ok
+test_update (test_dftldes.TestMappingCacheFlush) ... ok
+test_update (test_dftldes.TestMappingCacheFlushAndLoad) ... ok
+test_update (test_dftldes.TestMappingCacheFlushWithEviction) ... ok
+test_update (test_dftldes.TestMappingCacheLoad) ... ok
+test_update (test_dftldes.TestMappingCacheParallel) ... ok
+test_update (test_dftldes.TestMappingCacheParallel3) ... ok
+test_update (test_dftldes.TestMappingCacheSameLpnTranslation) ... ok
+test_update (test_dftldes.TestMappingCacheSameLpnUpdate) ... ok
+test_update (test_dftldes.TestMappingCacheSameLpnUpdateWEvict) ... skipped 'Skip unless we want to test all'
+test_update (test_dftldes.TestMappingCacheSimpleTranslation) ... ok
+test_update (test_dftldes.TestMappingCacheWriteBack) ... ok
+test_main (test_dftldes.TestParallelDFTL) ... ok
+test_parallel_translation (test_dftldes.TestParallelTranslation) ... ok
+test_write (test_dftldes.TestParallelTranslation) ... ok
+test_read (test_dftldes.TestRead) ... ok
+test_read_larger (test_dftldes.TestRead) ... ok
+test_mapping (test_dftldes.TestSegmenting) ... ok
+test_mapping_with_segment (test_dftldes.TestSegmenting) ... ok
+test_split (test_dftldes.TestSegmenting) ... ok
+test_split_2 (test_dftldes.TestSegmenting) ... ok
+test (test_dftldes.TestSimpleGC) ... ok
+test (test_dftldes.TestSplit) ... ok
+test (test_dftldes.TestTransBlockCleaner) ... ok
+test (test_dftldes.TestTranslationWithWrite) ... ok
+test (test_dftldes.TestTranslationWithWriteNotAligned) ... ok
+test (test_dftldes.TestTranslationWithWriteTwice) ... ok
+test (test_dftldes.TestTranslationWriteBacks) ... ok
+test_3_victim_candidates (test_dftldes.TestVictimBlocks) ... ok
+test_cur_blocks (test_dftldes.TestVictimBlocks) ... ok
+test_empty (test_dftldes.TestVictimBlocks) ... ok
+test_entry (test_dftldes.TestVictimBlocks) ... ok
+test_init (test_dftldes.TestVictimBlocks) ... ok
+test_one_victim_candidate (test_dftldes.TestVictimBlocks) ... ok
+test_valid_ratio_stats (test_dftldes.TestVictimBlocks) ... ok
+test_empty (test_dftldes.TestWearLevelingVictimBlocks) ... ok
+test_entry (test_dftldes.TestWearLevelingVictimBlocks) ... ok
+test_init (test_dftldes.TestWearLevelingVictimBlocks) ... ok
+test_some_used (test_dftldes.TestWearLevelingVictimBlocks) ... ok
+test_write (test_dftldes.TestWrite) ... ok
+test_write_2vpn (test_dftldes.TestWrite) ... ok
+test_write_larger (test_dftldes.TestWrite) ... ok
+test_write_larger2 (test_dftldes.TestWrite) ... ok
+test_write_outofspace (test_dftldes.TestWrite) ... ok
+test_holding_slots (simulator_test.TestNCQSingleQueue) ... ok
+test_holding_slots (simulator_test.TestNCQSingleQueueWithWaitTime) ... ok
+test_main (flashcontroller_test.TestChannel) ... ok
+test_main (flashcontroller_test.TestController) ... ok
+test_main (flashcontroller_test.TestControllerRequest) ... ok
+test_main (flashcontroller_test.TestControllerRequest2) ... ok
+test_main (flashcontroller_test.TestControllerTag) ... ok
+test_main (flashcontroller_test.TestControllerTime) ... ok
+test_main (flashcontroller_test.TestControllerTranslation) ... ok
+test_main (flashcontroller_test.TestFlashAddress)
+Remove prefix _ ... ok
+test (misc_test.TestClassifyGcLOG) ... skipped 'Need real device mounted'
+test_cpu (misc_test.TestCpuhandler) ... ok
+test (misc_test.TestEventFileSets) ... ok
+test_copy (misc_test.TestExtent) ... ok
+test (misc_test.TestF2FSGCCall) ... skipped 'Need FIO to create some random workload to create F2FS garbage'
+test (misc_test.TestGroupToBatches) ... ok
+test_larger (misc_test.TestGroupToBatches) ... ok
+test (misc_test.TestImportPyreuse) ... ok
+test_ncq_depth_setting (misc_test.TestLinuxNCQDepth) ... skipped 'Need real device that supports NCQ'
+test (misc_test.TestLpnClassification) ... skipped 'need real device'
+test (misc_test.TestNCQParser) ... ok
+test (misc_test.TestRandomChannelID) ... ok
+test_setting (misc_test.TestSettingScheduler) ... skipped 'Need real device that supports setting scheduler'
+test_basic (config_test.TestConfig) ... ok
+test_default (config_test.TestConfig) ... ok
+test_offset_size_translation (config_test.TestConfig) ... ok
+test_sec_translation (config_test.TestConfig) ... ok
+test_npages (config_test.TestConfigNewFlash) ... ok
+test_get_all_cur_blocks (test_tagblockpool.TestBlockPoolWithCurBlocks) ... ok
+test_get_cur_block_obj (test_tagblockpool.TestBlockPoolWithCurBlocks) ... ok
+test_init (test_tagblockpool.TestBlockPoolWithCurBlocks) ... ok
+test_next_ppns_context (test_tagblockpool.TestBlockPoolWithCurBlocks) ... ok
+test_next_ppns_from_cur_block (test_tagblockpool.TestBlockPoolWithCurBlocks) ... ok
+test_next_ppns_from_cur_block_all (test_tagblockpool.TestBlockPoolWithCurBlocks) ... ok
+test_next_ppns_from_cur_block_overflow (test_tagblockpool.TestBlockPoolWithCurBlocks) ... ok
+test_remove_full_cur_blocks (test_tagblockpool.TestBlockPoolWithCurBlocks) ... ok
+test_init (test_tagblockpool.TestCurrentBlock) ... ok
+test_next_ppns (test_tagblockpool.TestCurrentBlock) ... ok
+test_next_ppns_overflow (test_tagblockpool.TestCurrentBlock) ... ok
+test_num_free (test_tagblockpool.TestCurrentBlock) ... ok
+test_changing_tag (test_tagblockpool.TestTagBlockPool) ... ok
+test_changing_to_multiple_tags (test_tagblockpool.TestTagBlockPool) ... ok
+test_count_of_blocks (test_tagblockpool.TestTagBlockPool) ... ok
+test_getting_count_distribution (test_tagblockpool.TestTagBlockPool) ... ok
+test_greedy_pick (test_tagblockpool.TestTagBlockPool) ... ok
+test_init (test_tagblockpool.TestTagBlockPool) ... ok
+test_initial_count (test_tagblockpool.TestTagBlockPool) ... ok
+test_least_erased_block (test_tagblockpool.TestTagBlockPool) ... ok
+test_most_erased_block (test_tagblockpool.TestTagBlockPool) ... ok
+test_pick (test_tagblockpool.TestTagBlockPool) ... ok
+test_pick_and_change (test_tagblockpool.TestTagBlockPool) ... ok
+test_pick_empty (test_tagblockpool.TestTagBlockPool) ... ok
+test_init (test_workflow.TestWorkflow) ... ok
+test_on_fs_run_and_sim (test_workflow.TestWorkflow) ... mke2fs 1.42.13 (17-May-2015)
+dumpe2fs 1.42.13 (17-May-2015)
+ok
+test_onfs_workload (test_workflow.TestWorkflow) ... mke2fs 1.42.13 (17-May-2015)
+dumpe2fs 1.42.13 (17-May-2015)
+ok
+test_save_conf (test_workflow.TestWorkflow) ... ok
+test_simulation (test_workflow.TestWorkflow) ... ok
+test_Dftl (test_dftlext.DftlextTest) ... ok
+test_extent (test_dftlext.DftlextTest2) ... ok
+test_extent_e2e (test_dftlext.DftlextTest3) ... ok
+test_main (test_dftlext.TestDftextGC) ... ok
+test_main (test_dftlext.TestDftextGCSingleChannel) ... ok
+test_main (test_dftlext.TestDftlextParallelFlash) ... ok
+test_main (test_dftlext.TestDftlextTimeline) ... ok
+test_main2 (test_dftlext.TestEventIter) ... ok
+test_main (test_dftlext.TestTimelineAndFlash) ... ok
+test_comp (test_nkftl.TestBlockInfo) ... ok
+test_init (test_nkftl.TestBlockInfo) ... ok
+test_priority_queue (test_nkftl.TestBlockInfo) ... ok
+test_1 (test_nkftl.TestBlockIter) ... ok
+test_data_blocks (test_nkftl.TestBlockPool) ... ok
+test_data_blocks_overflow (test_nkftl.TestBlockPool) ... ok
+test_free_used_log (test_nkftl.TestBlockPool) ... ok
+test_freeblocks (test_nkftl.TestBlockPool) ... ok
+test_init (test_nkftl.TestBlockPool) ... ok
+test_log_blocks (test_nkftl.TestBlockPool) ... ok
+test (test_nkftl.TestCleanDataGroup) ... ok
+test_clean_data_blocks (test_nkftl.TestCleaningDataBlocks) ... ok
+test_init_gc (test_nkftl.TestCleaningDataBlocks) ... ok
+runTest (test_nkftl.TestConcurrency_DataGroupGC) ... ok
+test_write (test_nkftl.TestConcurrency_DataIntegrity) ... ok
+test (test_nkftl.TestConcurrency_FullMerge) ... ok
+test_write (test_nkftl.TestConcurrency_RandomOperations) ... ok
+test_write (test_nkftl.TestConcurrency_RandomOperationsNCQ) ... ok
+test_write (test_nkftl.TestConcurrency_RandomWritesBroad) ... skipped 'Takes too long'
+test_write (test_nkftl.TestConcurrency_WriteNGC) ... ok
+test (test_nkftl.TestConcurrency_cleanlogblock) ... ok
+test_adding (test_nkftl.TestDataBlockMappingTable) ... ok
+test_init (test_nkftl.TestDataBlockMappingTable) ... ok
+test_removing (test_nkftl.TestDataBlockMappingTable) ... ok
+test_discard (test_nkftl.TestFTLOperations) ... ok
+test_read (test_nkftl.TestFTLOperations) ... ok
+test_write (test_nkftl.TestFTLOperations) ... ok
+test_write_large_extent (test_nkftl.TestFTLOperations) ... ok
+test_write_logical_block (test_nkftl.TestFTLOperations) ... ok
+test_write_logical_block_overflow (test_nkftl.TestFTLOperations) ... ok
+test (test_nkftl.TestFullMergeOnePage) ... ok
+test (test_nkftl.TestFullMerge_Unaligned) ... ok
+test (test_nkftl.TestFullMerge_two_in_two) ... ok
+test (test_nkftl.TestFullMerge_with_data_blocks) ... ok
+test_high_threshold (test_nkftl.TestGcDecider) ... ok
+test_init (test_nkftl.TestGcDecider) ... ok
+test_add_mapping (test_nkftl.TestLogBlockMappingTable) ... ok
+test_init (test_nkftl.TestLogBlockMappingTable) ... ok
+test_next_ppns (test_nkftl.TestLogBlockMappingTable) ... ok
+test_add_mapping (test_nkftl.TestLogGroup2) ... ok
+test_allocate_blocks_in_channel (test_nkftl.TestLogGroup2) ... ok
+test_incr_channel (test_nkftl.TestLogGroup2) ... ok
+test_next_ppns_channel_position (test_nkftl.TestLogGroup2) ... ok
+test_next_ppns_in_channel (test_nkftl.TestLogGroup2) ... ok
+test_next_ppns_in_channel_failure (test_nkftl.TestLogGroup2) ... ok
+test_next_ppns_in_channel_with_allocation (test_nkftl.TestLogGroup2) ... ok
+test_next_ppns_infinit_strip (test_nkftl.TestLogGroup2) ... ok
+test_next_ppns_one_channel (test_nkftl.TestLogGroup2) ... ok
+test_next_ppns_overflow_channel (test_nkftl.TestLogGroup2) ... ok
+test_next_ppns_overflow_it (test_nkftl.TestLogGroup2) ... ok
+test_next_ppns_simple (test_nkftl.TestLogGroup2) ... ok
+test_next_ppns_small_strip (test_nkftl.TestLogGroup2) ... ok
+test_next_ppns_two_blocks_per_channel (test_nkftl.TestLogGroup2) ... ok
+test_remove_log_block (test_nkftl.TestLogGroup2) ... ok
+test_write (test_nkftl.TestLogicalBlockSerialization_DifferentLogicalBlock) ... ok
+test (test_nkftl.TestLogicalBlockSerialization_Discard) ... ok
+test_write (test_nkftl.TestLogicalBlockSerialization_SameLogicalBlock) ... ok
+test_write (test_nkftl.TestLogicalBlockSerialization_SameLogicalPage) ... ok
+test_write (test_nkftl.TestLogicalBlockSerialization_WriteAndRead) ... ok
+test_write (test_nkftl.TestLogicalBlockSerialization_WriteAndRead2Procs) ... ok
+test_init_gc (test_nkftl.TestMovingDataBlocks) ... ok
+test_move_data_blocks (test_nkftl.TestMovingDataBlocks) ... ok
+test_init_gc (test_nkftl.TestMovingLogBlocks) ... ok
+test_move_data_blocks (test_nkftl.TestMovingLogBlocks) ... ok
+test_GC_harder (test_nkftl.TestNkftl) ... ok
+test_GC_harder2 (test_nkftl.TestNkftl) ... ok
+test_GC_harder_super (test_nkftl.TestNkftl) ... skipped 'Skip unless we want to test all'
+test_GC_simple (test_nkftl.TestNkftl) ... ok
+test_data_integrity (test_nkftl.TestNkftl) ... ok
+test_init (test_nkftl.TestNkftl) ... ok
+test_write_and_read (test_nkftl.TestNkftl) ... ok
+test_erase_block (test_nkftl.TestOutOfBandAreas) ... ok
+test_init (test_nkftl.TestOutOfBandAreas) ... ok
+test_lpns_of_block (test_nkftl.TestOutOfBandAreas) ... ok
+test_remap (test_nkftl.TestOutOfBandAreas) ... ok
+test_wipe_ppn (test_nkftl.TestOutOfBandAreas) ... ok
+test_is_not_partial_mergable_because_its_switch_mergable (test_nkftl.TestPartialMergeMergable) ... ok
+test_is_not_partial_mergable_not_aligned (test_nkftl.TestPartialMergeMergable) ... ok
+test_is_partial_mergable (test_nkftl.TestPartialMergeMergable) ... ok
+test (test_nkftl.TestPartialMergeWithMoving) ... ok
+test_partial_merge (test_nkftl.TestPartialMerge_Merge) ... ok
+test_read (test_nkftl.TestSimpyIntegration) ... ok
+test_write (test_nkftl.TestSimpyIntegration) ... ok
+test_switch_merge (test_nkftl.TestSwitchMerge) ... ok
+test_data_used (test_nkftl.TestVictimBlocks) ... ok
+test_empty_victims_data (test_nkftl.TestVictimBlocks) ... ok
+test_empty_victims_log (test_nkftl.TestVictimBlocks) ... ok
+test_init (test_nkftl.TestVictimBlocks) ... ok
+test_log_used (test_nkftl.TestVictimBlocks) ... ok
+test_one_victim_blocks (test_nkftl.TestVictimBlocks) ... ok
+test_data_block (test_nkftl.TestWearLevelingVictimBlocks) ... ok
+test_log_block (test_nkftl.TestWearLevelingVictimBlocks) ... ok
+test (test_demo.TestAlignment) ... ok
+test (test_demo.TestGrouping) ... ok
+test (test_demo.TestLocality) ... ok
+test_run (test_demo.TestRunningWorkloadAndOutputRequestScale) ... mke2fs 1.42.13 (17-May-2015)
+dumpe2fs 1.42.13 (17-May-2015)
+debugfs 1.42.13 (17-May-2015)
+ok
+test_run (test_demo.TestUniformDataLifetime) ... mke2fs 1.42.13 (17-May-2015)
+dumpe2fs 1.42.13 (17-May-2015)
+ok
+test_run (test_demo.TestUsingExistingTraceToSimulate) ... ok
+test_run (test_demo.TestUsingExistingTraceToStudyRequestScale) ... ok
+test_run (test_demo.Test_TraceAndSimulateDFTLDES) ... mke2fs 1.42.13 (17-May-2015)
+dumpe2fs 1.42.13 (17-May-2015)
+ok
+test_run (test_demo.Test_TraceAndSimulateLinuxDD) ... mke2fs 1.42.13 (17-May-2015)
+128+0 records in
+128+0 records out
+8388608 bytes (8.4 MB, 8.0 MiB) copied, 0.00854982 s, 981 MB/s
+dumpe2fs 1.42.13 (17-May-2015)
+ok
+test_run (test_demo.Test_TraceAndSimulateNKFTL) ... mke2fs 1.42.13 (17-May-2015)
+dumpe2fs 1.42.13 (17-May-2015)
+ok
+test_run (test_demo.Test_TraceOnly) ... mke2fs 1.42.13 (17-May-2015)
+dumpe2fs 1.42.13 (17-May-2015)
+ok
+test_init_state (test_blockpool.TestBlockPoolErasureDist) ... ok
+test_use_some (test_blockpool.TestBlockPoolErasureDist) ... ok
+test_main (test_blockpool.TestBlockPool_data) ... ok
+test_main (test_blockpool.TestBlockPool_next_data) ... ok
+test_main (test_blockpool.TestBlockPool_next_gc_data) ... ok
+test_main (test_blockpool.TestBlockPool_outofspace) ... ok
+test_main (test_blockpool.TestBlockPool_stripping) ... ok
+test_create (test_bitmap.TestBitmap) ... ok
+test_init_states (test_bitmap.TestBitmap) ... ok
+test_invalidating (test_bitmap.TestBitmap) ... ok
+test_validating (test_bitmap.TestBitmap) ... ok
+test1 (lrulist_test.Test_LruCache) ... ok
+test_add_to_least_used (lrulist_test.Test_LruCache) ... ok
+test_del (lrulist_test.Test_LruCache) ... ok
+test_hits (lrulist_test.Test_LruCache) ... ok
+test_init (lrulist_test.Test_LruCache) ... ok
+test_items (lrulist_test.Test_LruCache) ... ok
+test_iter (lrulist_test.Test_LruCache) ... ok
+test_peek (lrulist_test.Test_LruCache) ... ok
+test_recency_iter (lrulist_test.Test_LruCache) ... ok
+test_reversed (lrulist_test.Test_LruCache) ... ok
+test_size (lrulist_test.Test_LruCache) ... ok
+test1 (lrulist_test.Test_LruDict) ... ok
+test_del (lrulist_test.Test_LruDict) ... ok
+test_hits (lrulist_test.Test_LruDict) ... ok
+test_init (lrulist_test.Test_LruDict) ... ok
+test_items (lrulist_test.Test_LruDict) ... ok
+test_iter (lrulist_test.Test_LruDict) ... ok
+test_peek (lrulist_test.Test_LruDict) ... ok
+test_recency_iter (lrulist_test.Test_LruDict) ... ok
+test_revsersed (lrulist_test.Test_LruDict) ... ok
+test_size (lrulist_test.Test_LruDict) ... ok
+test1 (lrulist_test.Test_lrucache) ... ok
+test_main (recorder_test.TestCountMe) ... ok
+test_main (recorder_test.TestFTLwithDFTL) ... ok
+test (test_devblockpool.TestGettingDistribution) ... ok
+test_erase_some (test_devblockpool.TestGettingDistribution) ... ok
+test_block_conversion (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_block_conversion2 (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_change_tag (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_change_tag_2 (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_count_blocks (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_count_channel_blocks (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_cur_blocks (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_init (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_next_ppns (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_next_ppns_across_channel (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_next_ppns_in_channel (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_next_ppns_in_channel_2_tags (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_next_ppns_wrap_around (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_pick (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_pick_and_move (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_pick_failure (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_pick_from_channel (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_pick_from_channel_failure (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_ppn_conversion (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_ppn_conversion2 (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_remove_full_cur_blocks (test_devblockpool.TestMultiChannelBlockPool) ... ok
+test_bottom_10_average_blockpool (test_devblockpool.TestWearLeveling) ... ok
+test_calulator (test_devblockpool.TestWearLeveling) ... ok
+test_calulator_with_0 (test_devblockpool.TestWearLeveling) ... ok
+test_get_bottom_10_used_blocks (test_devblockpool.TestWearLeveling) ... ok
+test_least_or_most_erased_blocks (test_devblockpool.TestWearLeveling) ... ok
+test_wearleveling_trigger (test_devblockpool.TestWearLeveling) ... ok
+test_wearleveling_trigger2 (test_devblockpool.TestWearLeveling) ... ok
+test_wearleveling_trigger3 (test_devblockpool.TestWearLeveling) ... ok
+test_write_to_most_used_blocks (test_devblockpool.TestWearLeveling) ... ok
+
+----------------------------------------------------------------------
+Ran 303 tests in 505.650s
+
+OK (skipped=9)

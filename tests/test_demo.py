@@ -237,6 +237,34 @@ class Test_TraceAndSimulateLinuxDD(unittest.TestCase):
         obj = LocalExperiment( Parameters(**para) )
         obj.main()
 
+class TestLinuxDdReqscaleAndDataLifetime(unittest.TestCase):
+    def test_run(self):
+        class LocalExperiment(experiment.Experiment):
+            def setup_workload(self):
+                self.conf['workload_class'] = "LinuxDdWrite"
+
+        para = experiment.get_shared_nolist_para_dict(expname="linux-dd-exp",
+                                                      lbabytes=1024*MB)
+        para.update(
+            {
+                'device_path': "/dev/loop0",
+                'ftl' : 'ftlcounter',
+                'enable_simulation': True,
+                'dump_ext4_after_workload': True,
+                'only_get_traffic': False,
+                'trace_issue_and_complete': True,
+            })
+
+        Parameters = collections.namedtuple("Parameters", ','.join(para.keys()))
+        obj = LocalExperiment( Parameters(**para) )
+        obj.main()
+
+class TestLinuxDdGrouping(unittest.TestCase):
+    def test(self):
+        for para in rule_parameter.ParaDict(expname="linux-dd-grouping", 
+                                            trace_expnames=['linux-dd-exp'],
+                                            rule="grouping"):
+            experiment.execute_simulation(para)
 
 if __name__ == '__main__':
     unittest.main()
