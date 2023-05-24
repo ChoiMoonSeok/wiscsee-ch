@@ -30,7 +30,7 @@ class ControlEvent(HostEventBase):
 
 class Event(HostEventBase):
     def __init__(self, sector_size, pid, operation, offset, size,
-            timestamp = None, pre_wait_time = None, sync = True, action = 'D'):
+            timestamp = None, pre_wait_time = None, sync = True, action = 'D', DT = None):
         self.pid = int(pid)
         self.operation = operation
         self.offset = int(offset)
@@ -39,6 +39,7 @@ class Event(HostEventBase):
         self.timestamp = timestamp
         self.pre_wait_time = pre_wait_time
         self.action = action
+        self.DT = DT
         assert action in ('D', 'C'), "action:{}".format(action)
 
         assert self.offset % sector_size == 0,\
@@ -61,7 +62,7 @@ class Event(HostEventBase):
     def get_lpn_extent(self, conf):
         lpn_start, lpn_count = conf.off_size_to_page_range(
                 self.offset, self.size, force_alignment=False)
-        return Extent(lpn_start = lpn_start, lpn_count = lpn_count)
+        return Extent(lpn_start = lpn_start, lpn_count = lpn_count, DT = self.DT)
 
     def __str__(self):
         return "Event pid:{pid}, operation:{operation}, offset:{offset}, "\
@@ -112,6 +113,7 @@ class EventIterator(object):
             dic['pre_wait_time'] = float(dic['pre_wait_time'])
 
         dic['operation'] = self._convert(dic['operation'])
+        dic['DT'] = int(dic['DT'])
 
         return Event(**dic)
 

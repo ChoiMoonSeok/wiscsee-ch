@@ -2,10 +2,11 @@ import simpy
 import random
 
 class Extent(object):
-    def __init__(self, lpn_start, lpn_count):
+    def __init__(self, lpn_start, lpn_count, DT = None):
         assert lpn_count > 0
         self.lpn_start = lpn_start
         self.lpn_count = lpn_count
+        self.DT = DT
 
     @property
     def next_lpn(self):
@@ -109,7 +110,7 @@ def split_ext_by_segment(n_pages_per_segment, extent):
         else:
             if cur_ext is not None:
                 exts[last_seg_id] = cur_ext
-            cur_ext = Extent(lpn_start=lpn, lpn_count=1)
+            cur_ext = Extent(lpn_start=lpn, lpn_count=1, DT=extent.DT)
         last_seg_id = seg_id
 
     if cur_ext is not None:

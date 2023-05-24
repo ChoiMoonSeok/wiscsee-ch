@@ -158,7 +158,7 @@ class BlockPoolWithCurBlocks(TagBlockPool):
         pick_and_move().
         blocknum must has been tagged $tag before calling this function.
         """
-        block_obj = CurrentBlock(self._n_pages_per_block, blocknum=blocknum)
+        block_obj = CurrentBlock(self._n_pages_per_block, blocknum=blocknum) # alocate block
         self._cur_blocks[tag][block_index] = block_obj
         return block_obj
 

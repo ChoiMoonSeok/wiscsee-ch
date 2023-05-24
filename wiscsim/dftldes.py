@@ -399,18 +399,19 @@ def split_ext_to_mvpngroups(conf, extent):
     """
     group_extent_list = []
     for i, lpn in enumerate(extent.lpn_iter()):
+
         cur_m_vpn = conf.lpn_to_m_vpn(lpn)
         if i == 0:
             # intialization
             cur_group_extent = Extent(lpn_start = extent.lpn_start,
-                lpn_count = 1)
+                lpn_count = 1, DT = extent.DT)
             group_extent_list.append(cur_group_extent)
         else:
             if cur_m_vpn == last_m_vpn:
                 cur_group_extent.lpn_count += 1
             else:
                 cur_group_extent = Extent(lpn_start = lpn,
-                    lpn_count = 1)
+                    lpn_count = 1, DT = extent.DT)
                 group_extent_list.append(cur_group_extent)
 
         last_m_vpn = cur_m_vpn
